@@ -1,5 +1,8 @@
 //All of these are practice taken from EDABIT.COM
 
+console.log("hello world")
+
+//PROBLEM 1
 // Get Word Count
 // Create a function that takes a string and returns the word count.
 //  The string will be a sentence.
@@ -13,7 +16,6 @@
 // Notes
 // If you get stuck on a challenge, find help in the Resources tab.
 // If you're really stuck, unlock solutions in the Solutions tab.
-console.log("hello world")
 
 function countWords(str) {
 	let count = str.split(" ");
@@ -21,4 +23,25 @@ function countWords(str) {
 }
 
 countWords("Just an example here move along");
+////////////////////////////////////////////////////////////////////
+//Problem 2
+// Write a function that returns true if a hash contains the specified key, and false otherwise.
 
+// Examples
+// hasKey({ a: 44, b: 45, c: 46 }, "d") ➞ false
+
+// hasKey({ craves: true, midnight: true, snack: true }, "morning") ➞ false
+
+// hasKey({ pot: 1, tot: 2, not: 3 }, "not") ➞ true
+
+
+
+function hasKey(obj, key) {
+	return console.log(key in obj);
+}
+
+hasKey({ a: 44, b: 45, c: 46 }, "d")
+hasKey({ pot: 1, tot: 2, not: 3 }, "not")
+
+/////////////////////////////////////////////////
+// Problem 3
