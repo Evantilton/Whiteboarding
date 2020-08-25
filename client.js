@@ -1,7 +1,7 @@
 //All of these are practice taken from EDABIT.COM unless they say Hackerrank.com
 //Run with the command: node client.js
 
-// console.log("hello world")
+console.log("hello world")
 
 //PROBLEM 1
 // Get Word Count
@@ -150,11 +150,17 @@
 // Write a program that prints a staircase of size .
 
 function staircase(n) {
-
-    for (let i = 0; i < n; i++) {
-        for (let y = 0; y < n; y++) {
-            
+    for (let i=0; i < n; i++) {
+        let line = "";
+        for (let y=1; y<n+1; y++) {
+            if (y >= n - i) {
+                line = line + "#";
+           } else {
+                line = line + " ";
+            }   
+            }
+            console.log(line);
         }
     }
 
-}
+    staircase(6);
