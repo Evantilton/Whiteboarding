@@ -149,18 +149,72 @@ console.log("hello world")
 
 // Write a program that prints a staircase of size .
 
-function staircase(n) {
-    for (let i=0; i < n; i++) {
-        let line = "";
-        for (let y=1; y<n+1; y++) {
-            if (y >= n - i) {
-                line = line + "#";
-           } else {
-                line = line + " ";
-            }   
-            }
-            console.log(line);
+// function staircase(n) {
+//     for (let i=0; i < n; i++) {
+//         let line = "";
+//         for (let y=1; y<n+1; y++) {
+//             if (y >= n - i) {
+//                 line = line + "#";
+//            } else {
+//                 line = line + " ";
+//             }   
+//             }
+//             console.log(line);
+//         }
+//     }
+
+//     staircase(6);
+
+    /////////////////////////////
+
+    // Given five positive integers, 
+    // find the minimum and maximum values that can be calculated by summing exactly four of the five integers. 
+    // Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+
+    // Complete the miniMaxSum function below.
+// function miniMaxSum(arr) {
+//     let sum = 0
+//     for (let i=0; i<arr.length; i++) {
+//         sum = sum + arr[i];
+//         console.log("sum", sum);
+//     }
+//     let min = sum;
+//     let max = 0;
+//     for (let y=0; y < arr.length; y++ ) {
+//         if (sum - arr[y] > max) {
+//             max = sum - arr[y]
+//             console.log("max", max);
+//         }
+//         if (sum - arr[y] < min) {
+//             min = sum-arr[y]
+//             console.log("min",min);
+//         }
+//     }
+    
+
+//     return console.log (min,max)
+// }
+
+// miniMaxSum([1,2,3,4,5]);
+    
+/////////////////////////////////////////////
+// You are in charge of the cake for your niece's birthday and have decided the cake will have one candle for each year of her total age. When she blows out the candles, she’ll only be able to blow out the tallest ones. Your task is to find out how many candles she can successfully blow out.
+
+// For example, if your niece is turning  years old, and the cake will have  candles of height , , , , she will be able to blow out  candles successfully, since the tallest candles are of height  and there are  such candles.
+
+function birthdayCakeCandles(ar) {
+    let biggest = 0;
+    let num = 0
+    for (let i=0; i < ar.length; i++) {
+        if (ar[i] > biggest) {
+            biggest = ar[i]
         }
     }
-
-    staircase(6);
+    for (let y=0; y < ar.length; y++) {
+        if (ar[y] === biggest) {
+            num++;
+        }
+    }
+    console.log(num);
+}
+birthdayCakeCandles([1,1,1,1,1,1]);
