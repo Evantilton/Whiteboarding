@@ -226,14 +226,45 @@ console.log("hello world")
 
 // sample input 07:05:45PM
 
-function timeConversion(s) {
-    console.log(s);
-    let hh = (s[0])+(s[1]);
-    if (s[8] === "P") {
-        hh = hh+12
-    }
-    return console.log(hh,s[2],s[3],s[4],s[5],s[6],s[7]);
+// function timeConversion(s) {
+//     let hh = s[0]+s[1];
+//     if ((s[8] === "A") && (hh === "12")) {
+//         hh = "00"
+//     }
+//     if (s[8] === "P") {
+//         if (hh === "12") {
+//             hh = "12"
+//         } else {
+//         hh = Number(hh)+12;
+//         }
+//     }
+    
+//     return hh+s[2]+s[3]+s[4]+s[5]+s[6]+s[7];
+// }   
 
+// timeConversion([0,7,":",0,5,":",4,5,"P","M"]);
+
+// ///////////////////////////
+// In this challenge, we practice looping over the characters of string. Check out the attached tutorial for more details.
+
+// Task
+
+// Complete the vowelsAndConsonants function in the editor below. It has one parameter, a string, , consisting of lowercase English alphabetic letters (i.e., a through z). The function must do the following:
+
+// First, print each vowel in  on a new line. The English vowels are a, e, i, o, and u, and each vowel must be printed in the same order as it appeared in .
+// Second, print each consonant (i.e., non-vowel) in  on a new line in the same order as it appeared in .
+
+function vowelsAndConsonants(s) {
+    for (let i = 0; i < s.length; i++) {
+        if ((s[i] == "a") || (s[i] == "e") || (s[i] == "i")|| (s[i] == "o")|| (s[i] == "u")) {
+            console.log(s[i])
+        }
+    }
+    for (let i = 0; i < s.length; i++) {
+        if ((s[i] == "b") || (s[i] == "c") || (s[i] == "d") || (s[i] == "f") || (s[i] == "g") || (s[i] == "h") || (s[i] == "j") || (s[i] == "k") || (s[i] == "l") || (s[i] == "m") || (s[i] == "n") || (s[i] == "p") || (s[i] == "q") || (s[i] == "r") || (s[i] == "s") || (s[i] == "t") || (s[i] == "v") || (s[i] == "w") || (s[i] == "x") || (s[i] == "y") || (s[i] == "z"))  {
+            console.log(s[i])
+        }
+    }
 }
 
-timeConversion([0,7,":",0,5,":",4,5,"P","M"]);
+vowelsAndConsonants (["j","a","v","a","s","c","r","i","p","t","l","o","o","p","s"])
