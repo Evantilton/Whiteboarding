@@ -202,19 +202,38 @@ console.log("hello world")
 
 // For example, if your niece is turning  years old, and the cake will have  candles of height , , , , she will be able to blow out  candles successfully, since the tallest candles are of height  and there are  such candles.
 
-function birthdayCakeCandles(ar) {
-    let biggest = 0;
-    let num = 0
-    for (let i=0; i < ar.length; i++) {
-        if (ar[i] > biggest) {
-            biggest = ar[i]
-        }
+// function birthdayCakeCandles(ar) {
+//     let biggest = 0;
+//     let num = 0
+//     for (let i=0; i < ar.length; i++) {
+//         if (ar[i] > biggest) {
+//             biggest = ar[i]
+//         }
+//     }
+//     for (let y=0; y < ar.length; y++) {
+//         if (ar[y] === biggest) {
+//             num++;
+//         }
+//     }
+//     console.log(num);
+// }
+// birthdayCakeCandles([1,1,1,1,1,1]);
+
+///////////////////////////////////////
+// Given a time in -hour AM/PM format, convert it to military (24-hour) time.
+
+// Note: Midnight is 12:00:00AM on a 12-hour clock, and 00:00:00 on a 24-hour clock. Noon is 12:00:00PM on a 12-hour clock, and 12:00:00 on a 24-hour clock.
+
+// sample input 07:05:45PM
+
+function timeConversion(s) {
+    console.log(s);
+    let hh = (s[0])+(s[1]);
+    if (s[8] === "P") {
+        hh = hh+12
     }
-    for (let y=0; y < ar.length; y++) {
-        if (ar[y] === biggest) {
-            num++;
-        }
-    }
-    console.log(num);
+    return console.log(hh,s[2],s[3],s[4],s[5],s[6],s[7]);
+
 }
-birthdayCakeCandles([1,1,1,1,1,1]);
+
+timeConversion([0,7,":",0,5,":",4,5,"P","M"]);
