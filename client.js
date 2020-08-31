@@ -254,17 +254,54 @@ console.log("hello world")
 // First, print each vowel in  on a new line. The English vowels are a, e, i, o, and u, and each vowel must be printed in the same order as it appeared in .
 // Second, print each consonant (i.e., non-vowel) in  on a new line in the same order as it appeared in .
 
-function vowelsAndConsonants(s) {
-    for (let i = 0; i < s.length; i++) {
-        if ((s[i] == "a") || (s[i] == "e") || (s[i] == "i")|| (s[i] == "o")|| (s[i] == "u")) {
-            console.log(s[i])
+// function vowelsAndConsonants(s) {
+//     for (let i = 0; i < s.length; i++) {
+//         if ((s[i] == "a") || (s[i] == "e") || (s[i] == "i")|| (s[i] == "o")|| (s[i] == "u")) {
+//             console.log(s[i])
+//         }
+//     }
+//     for (let i = 0; i < s.length; i++) {
+//         if ((s[i] == "b") || (s[i] == "c") || (s[i] == "d") || (s[i] == "f") || (s[i] == "g") || (s[i] == "h") || (s[i] == "j") || (s[i] == "k") || (s[i] == "l") || (s[i] == "m") || (s[i] == "n") || (s[i] == "p") || (s[i] == "q") || (s[i] == "r") || (s[i] == "s") || (s[i] == "t") || (s[i] == "v") || (s[i] == "w") || (s[i] == "x") || (s[i] == "y") || (s[i] == "z"))  {
+//             console.log(s[i])
+//         }
+//     }
+// }
+// //this was a trash way to write this, I should have just done another array for vowels and aphabets
+
+// vowelsAndConsonants (["j","a","v","a","s","c","r","i","p","t","l","o","o","p","s"])
+
+///////////////////////////
+// Complete the countApplesAndOranges function in the editor below. It should print the number of apples and oranges that land on Sam's house, each on a separate line.
+
+// countApplesAndOranges has the following parameter(s):
+
+// s: integer, starting point of Sam's house location.
+// t: integer, ending location of Sam's house location.
+// a: integer, location of the Apple tree.
+// b: integer, location of the Orange tree.
+// apples: integer array, distances at which each apple falls from the tree.
+// oranges: integer array, distances at which each orange falls from the tree.
+
+// Complete the countApplesAndOranges function below.
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+    let appleCount = 0;
+    let orangeCount = 0;
+    for (let i = 0; i < apples.length; i++) {
+        if ((apples[i]+a >= s) && (apples[i]+a <= t)) {
+            // console.log(apples);
+            // console.log("in appleCount and current apple array is", apples[i])
+            appleCount = appleCount + 1;
         }
     }
-    for (let i = 0; i < s.length; i++) {
-        if ((s[i] == "b") || (s[i] == "c") || (s[i] == "d") || (s[i] == "f") || (s[i] == "g") || (s[i] == "h") || (s[i] == "j") || (s[i] == "k") || (s[i] == "l") || (s[i] == "m") || (s[i] == "n") || (s[i] == "p") || (s[i] == "q") || (s[i] == "r") || (s[i] == "s") || (s[i] == "t") || (s[i] == "v") || (s[i] == "w") || (s[i] == "x") || (s[i] == "y") || (s[i] == "z"))  {
-            console.log(s[i])
+    for (let y = 0; y < oranges.length; y++) {
+        if ((oranges[y]+b >= s) && (oranges[y]+b <= t)) {
+            // console.log(oranges);
+            // console.log("in orangeCount and current orange array is", orange[y])
+            orangeCount++;
         }
     }
+     console.log(appleCount);
+     console.log(orangeCount);
 }
 
-vowelsAndConsonants (["j","a","v","a","s","c","r","i","p","t","l","o","o","p","s"])
+countApplesAndOranges(7,11,5,15,[-2,2,1],[5,-6])
