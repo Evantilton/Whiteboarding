@@ -283,25 +283,52 @@ console.log("hello world")
 // oranges: integer array, distances at which each orange falls from the tree.
 
 // Complete the countApplesAndOranges function below.
-function countApplesAndOranges(s, t, a, b, apples, oranges) {
-    let appleCount = 0;
-    let orangeCount = 0;
-    for (let i = 0; i < apples.length; i++) {
-        if ((apples[i]+a >= s) && (apples[i]+a <= t)) {
-            // console.log(apples);
-            // console.log("in appleCount and current apple array is", apples[i])
-            appleCount = appleCount + 1;
+// function countApplesAndOranges(s, t, a, b, apples, oranges) {
+//     let appleCount = 0;
+//     let orangeCount = 0;
+//     for (let i = 0; i < apples.length; i++) {
+//         if ((apples[i]+a >= s) && (apples[i]+a <= t)) {
+//             // console.log(apples);
+//             // console.log("in appleCount and current apple array is", apples[i])
+//             appleCount = appleCount + 1;
+//         }
+//     }
+//     for (let y = 0; y < oranges.length; y++) {
+//         if ((oranges[y]+b >= s) && (oranges[y]+b <= t)) {
+//             // console.log(oranges);
+//             // console.log("in orangeCount and current orange array is", orange[y])
+//             orangeCount++;
+//         }
+//     }
+//      console.log(appleCount);
+//      console.log(orangeCount);
+// }
+
+// countApplesAndOranges(7,11,5,15,[-2,2,1],[5,-6])
+
+///////////////////////////////////////////?
+
+
+// Function Description
+
+// Complete the function kangaroo in the editor below. It should return YES if they reach the same position at the same time, or NO if they don't.
+
+// kangaroo has the following parameter(s):
+
+// x1, v1: integers, starting position and jump distance for kangaroo 1
+// x2, v2: integers, starting position and jump distance for kangaroo 2
+
+// Complete the kangaroo function below.
+function kangaroo(x1, v1, x2, v2) {
+    let answer = "NO";
+    for (let i = 0; i < 100; i++) {
+        x1 = x1+v1;
+        x2 = x2+v2;
+        if (x1 === x2) {
+            answer = "YES";
         }
     }
-    for (let y = 0; y < oranges.length; y++) {
-        if ((oranges[y]+b >= s) && (oranges[y]+b <= t)) {
-            // console.log(oranges);
-            // console.log("in orangeCount and current orange array is", orange[y])
-            orangeCount++;
-        }
-    }
-     console.log(appleCount);
-     console.log(orangeCount);
+console.log(answer);
 }
 
-countApplesAndOranges(7,11,5,15,[-2,2,1],[5,-6])
+kangaroo(0,2,5,3);
